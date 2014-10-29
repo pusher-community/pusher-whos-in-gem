@@ -49,7 +49,7 @@ module WhosIn
 		# MAKE RUN SCRIPT
 
 		def self.run_script app_name
-			`sh ../every-5-seconds.sh http://#{app_name}.herokuapp.com/people`
+			`bin/every-5-seconds.sh http://#{app_name}.herokuapp.com/people`
 		end
 
 
