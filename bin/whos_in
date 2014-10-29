@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'commander/import'
+require_relative '../lib/whos_in'
+
+program :version, '0.0.1'
+program :description, 'Setting up your whos_in realtime Heroku app'
+ 
+command :init do |c|
+  c.syntax = 'whos_in init, [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Whos_in::Commands::Init,
+    # WhosIn::Application.new.ask_for_app_name
+    application = WhosIn::Application.new
+    application.setup
+  end
+end
+
+command :run do |c|
+  c.syntax = 'whos_in run [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    app_name = args.first
+    WhosIn::Application.run_script app_name
+  end
+end
+
