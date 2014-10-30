@@ -1,4 +1,5 @@
 require_relative "whos_in/version"
+require 'rufus-scheduler'
 
 module WhosIn
   
@@ -48,12 +49,33 @@ module WhosIn
 
 		# MAKE RUN SCRIPT
 
-		def self.run_script app_name
-			`bin/every-5-seconds.sh http://#{app_name}.herokuapp.com/people`
+		def self.tell_user_and_scan_network
+			puts "Scanning local network and posting to #{@heroku_app}"
+			puts "Press Ctrl+C to interrupt"
+			`bin/local_scanner.sh #{@heroku_app}`
 		end
 
+		def self.run_script app_name
+			@heroku_app = "http://#{app_name}.herokuapp.com/people"
+			tell_user_and_scan_network
+			scheduler = Rufus::Scheduler.new
+			scheduler.every '2m' do
+				tell_user_and_scan_network
+			end
+			scheduler.join
+		end
+
+		def self.open_app app_name
+			puts "Opening your application"
+			sleep 2
+			`heroku open -a #{app_name}`
+		end
+
+		def self.run_app app_name
+			self.open_app app_name
+			self.run_script app_name
+		end
 
 	end
-
 
 end

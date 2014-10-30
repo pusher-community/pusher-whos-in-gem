@@ -19,9 +19,8 @@ update_offline_since() {
   json=$( IFS=, ; echo "${json[*]}")
   json="[$json]"
 
-  curl -X POST -d "$json" $WHOSIN_URL > /dev/null &
+  curl -X POST -d "$json" $WHOSIN_URL >/dev/null 2>&1
 
-  echo $json
 }
 
 local_scan

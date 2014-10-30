@@ -4,3 +4,4 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'commander'
+gem 'rufus-scheduler'
