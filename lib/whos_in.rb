@@ -53,7 +53,7 @@ module WhosIn
 			puts "Scanning local network and posting to #{@heroku_url}"
 			puts "Press Ctrl+C to interrupt"
 			# puts `pwd`
-			`pwd` +`bin/local_scanner.sh #{@heroku_url}`
+			`local_scanner #{@heroku_url}`
 		end
 
 		def self.run_script
