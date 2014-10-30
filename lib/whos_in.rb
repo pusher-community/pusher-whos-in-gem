@@ -50,13 +50,12 @@ module WhosIn
 		# MAKE RUN SCRIPT
 
 		def self.tell_user_and_scan_network
-			puts "Scanning local network and posting to #{@heroku_app}"
+			puts "Scanning local network and posting to #{@heroku_url}"
 			puts "Press Ctrl+C to interrupt"
-			`bin/local_scanner.sh #{@heroku_app}`
+			`bin/local_scanner.sh #{@heroku_url}`
 		end
 
-		def self.run_script app_name
-			@heroku_app = "http://#{app_name}.herokuapp.com/people"
+		def self.run_script
 			tell_user_and_scan_network
 			scheduler = Rufus::Scheduler.new
 			scheduler.every '2m' do
@@ -65,15 +64,18 @@ module WhosIn
 			scheduler.join
 		end
 
-		def self.open_app app_name
+		def self.open_app
 			puts "Opening your application"
 			sleep 2
-			`heroku open -a #{app_name}`
+			`open #{@heroku_app}`
+			sleep 3
 		end
 
 		def self.run_app app_name
-			self.open_app app_name
-			self.run_script app_name
+			@heroku_app = "http://#{app_name}.herokuapp.com"
+			@heroku_url = @heroku_app + "/people"
+			self.open_app
+			self.run_script
 		end
 
 	end

@@ -27,7 +27,7 @@ command :run do |c|
   c.option '--some-switch', 'Some switch that does something'
   c.action do |args, options|
     app_name = args.first
-    WhosIn::Application.run_script app_name
+    WhosIn::Application.run_app app_name
   end
 end
 
