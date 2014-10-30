@@ -50,10 +50,11 @@ module WhosIn
 		# MAKE RUN SCRIPT
 
 		def self.tell_user_and_scan_network
+			script =  File.expand_path('../../bin/local_scanner', __FILE__)
+
 			puts "Scanning local network and posting to #{@heroku_url}"
 			puts "Press Ctrl+C to interrupt"
-			# puts `pwd`
-			`local_scanner #{@heroku_url}`
+			`#{script} #{@heroku_url}`
 		end
 
 		def self.run_script

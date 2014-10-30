@@ -1,7 +1,5 @@
 #!/bin/bash
 
-`
-
 APP_USERNAME="foo"
 APP_PASSWORD="bar"
 WHOSIN_URL=$1
@@ -32,5 +30,3 @@ if [ ${#macs[@]} -eq 0 ]; then
 else
   update_offline_since
 fi
-
-`
