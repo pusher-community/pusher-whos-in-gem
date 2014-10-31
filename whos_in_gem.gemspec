@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'whos_in/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pusher_whos_in"
+  spec.name          = "pusher-whos-in"
   spec.version       = WhosIn::VERSION
   spec.authors       = ["Jamie Patel"]
   spec.email         = ["jamie@notespublication.com"]
