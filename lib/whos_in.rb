@@ -6,7 +6,7 @@ module WhosIn
 	class Application
 
 		def launch_heroku_deploy
-			puts "Launching deployment setup... \n\n When you're done run 'whos_in run *your_app_name* " 
+			puts "Launching deployment setup... \n\n When you're done run 'pusher-whos-in run *your_app_name* " 
 			sleep 2
 			`open https://heroku.com/deploy?template=https://github.com/pusher/pusher-whos-in`
 		end
