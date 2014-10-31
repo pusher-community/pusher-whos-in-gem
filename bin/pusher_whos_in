@@ -10,7 +10,7 @@ program :description, 'Setting up your whos_in realtime Heroku app'
 command :init do |c|
   c.syntax = 'whos_in init, [options]'
   c.summary = 'Sets up your own Who\'s In? application'
-  c.description = 'Step-by-step it takes you to the Heroku deploy site, asks for your Pusher keys and sets up your application'
+  c.description = 'Takes you to the Heroku page where you can deploy your own Who\'s In App'
   c.example 'description', 'command example'
   c.option '--some-switch', 'Some switch that does something'
   c.action do |args, options|
@@ -30,15 +30,3 @@ command :run do |c|
     WhosIn::Application.run_app app_name
   end
 end
-
-# command :kill do |c|
-#   c.syntax = 'whos_in kill APP_NAME'
-#   c.summary = 'Stops the cron script'
-#   c.description = ''
-#   c.example 'description', 'whos_in kill _your_app_name_'
-#   c.option '--some-switch', 'Some switch that does something'
-#   c.action do |args, options|
-#     # app_name = args.first
-#     # WhosIn::Application.kill
-#   end
-# end
