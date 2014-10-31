@@ -8,14 +8,12 @@ module WhosIn
 		def launch_heroku_deploy
 			puts "Launching deployment setup... \n\n When you're done run 'whos_in run *your_app_name* " 
 			sleep 2
-			`open https://heroku.com/deploy?template=https://github.com/jpatel531/whos_in`
+			`open https://heroku.com/deploy?template=https://github.com/pusher/pusher-whos-in`
 		end
 
 		def setup
 			launch_heroku_deploy
 		end
-
-		# MAKE RUN SCRIPT
 
 		def self.tell_user_and_scan_network
 			script =  File.expand_path('../../bin/local_scanner', __FILE__)
