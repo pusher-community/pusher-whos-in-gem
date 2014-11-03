@@ -34,7 +34,7 @@ If you would prefer not to use this gem for your Who's In app, clone [this scrip
 
 Click this shiny button:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/jpatel531/whos_in)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/pusher/pusher-whos-in)
 
 Then run:
 
