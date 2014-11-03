@@ -38,7 +38,7 @@ Click this shiny button:
 
 Then run:
 
-    $ sh local_scanner *url_to_post_mac_addresses* *your_pusher_url*
+    $ sh local_scanner.sh *url_to_post_mac_addresses* *your_pusher_url*
 
 ###Usage Without Deployment
 
