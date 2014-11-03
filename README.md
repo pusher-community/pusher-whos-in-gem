@@ -28,6 +28,10 @@ When that's done, type the command:
 
 E.g. `pusher-whos-in run my_office_whos_in_app`. Then type your password. This script will run every two minutes and your Heroku application should show you who is in your office in realtime.
 
+###Usage Without Gem
+
+###Usage Without Heroku
+
 ## Contributing
 
 1. Fork it ( https://github.com/pusher/pusher-whos-in-gem/fork )
