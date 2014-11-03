@@ -44,7 +44,7 @@ Then run:
 
     $ git clone https://github.com/pusher/pusher-whos-in.git
 
-Get yourself some [Pusher credentials](http://app.pusher.com) and either set your `PUSHER_URL` as an environment variable, or place it within `app.rb`. Now run your server:
+Get yourself some [Pusher credentials](http://app.pusher.com) and either set your `PUSHER_URL` as an environment variable, or place `Pusher.url = *your_pusher*url` within `app.rb`. Now run your server:
 
     $ shotgun
 
