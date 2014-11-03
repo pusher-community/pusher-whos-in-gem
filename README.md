@@ -30,7 +30,23 @@ E.g. `pusher-whos-in run my_office_whos_in_app`. Then type your password. This s
 
 ###Usage Without Gem
 
-###Usage Without Heroku
+If you would prefer not to use this gem for your Who's In app, clone [this script](https://gist.github.com/jpatel531/d8ab8c6e41abbc63d4cf). Make sure you have `PUSHER_URL = *something*` set as an environment variable. If you are using Heroku, use the `PUSHER_URL` provisioned to you.
+
+Click this shiny button:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/jpatel531/whos_in)
+
+Then run:
+
+    $ sh local_scanner *url_to_post_mac_addresses* *your_pusher_url*
+
+###Usage Without Deployment
+
+    $ git clone https://github.com/pusher/pusher-whos-in.git
+
+Get yourself some [Pusher credentials](http://app.pusher.com) and either set your `PUSHER_URL` as an environment variable, or place it within `app.rb`. Now run your server:
+
+    $ shotgun
 
 ## Contributing
 
