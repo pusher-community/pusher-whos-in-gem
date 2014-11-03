@@ -19,7 +19,7 @@ module WhosIn
 			script =  File.expand_path('../../bin/local_scanner', __FILE__)
 			pusher_url = `heroku config:get PUSHER_URL -a #{@heroku_app}`
 
-			puts "Scanning local network and posting to #{@heroku_url}"
+			puts "Scanning local network every 2 minutes and posting to #{@heroku_url}"
 			puts "Press Ctrl+C to interrupt"
 			`#{script} #{@heroku_url} #{pusher_url}`
 		end
