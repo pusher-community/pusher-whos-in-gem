@@ -17,10 +17,11 @@ module WhosIn
 
 		def self.tell_user_and_scan_network
 			script =  File.expand_path('../../bin/local_scanner', __FILE__)
+			pusher_url = `heroku config:get PUSHER_URL -a #{@heroku_app}`
 
 			puts "Scanning local network and posting to #{@heroku_url}"
 			puts "Press Ctrl+C to interrupt"
-			`#{script} #{@heroku_url}`
+			`#{script} #{@heroku_url} #{pusher_url}`
 		end
 
 		def self.run_script
@@ -40,9 +41,8 @@ module WhosIn
 		end
 
 		def self.run_app app_name
-			@heroku_app = "http://#{app_name}.herokuapp.com"
-			@heroku_url = @heroku_app + "/people"
-			self.open_app
+			@heroku_app = app_name
+			@heroku_url = "http://#{app_name}.herokuapp.com/people"
 			self.run_script
 		end
 
