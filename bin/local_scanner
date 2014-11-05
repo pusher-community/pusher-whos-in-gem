@@ -1,10 +1,7 @@
 #!/bin/bash
 
-APP_USERNAME="foo"
-APP_PASSWORD="bar"
 WHOSIN_URL=$1
 AUTH_KEY=$2
-
 
 local_scan() {
   macs=( $(sudo nmap -sn 192.168.1.0/24 | grep -Eio "([0-9A-F]{2}:){5}[0-9A-F]{2}") )
