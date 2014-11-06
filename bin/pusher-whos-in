@@ -14,8 +14,7 @@ command :init do |c|
   c.example 'description', 'command example'
   c.option '--some-switch', 'Some switch that does something'
   c.action do |args, options|
-    application = WhosIn::Application.new
-    application.setup
+   WhosIn::Application.launch_heroku_deploy
   end
 end
 
