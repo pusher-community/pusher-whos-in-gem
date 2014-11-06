@@ -33,12 +33,12 @@ module WhosIn
 			scheduler.join
 		end
 
-		def self.open_app
-			puts "Opening your application"
-			sleep 2
-			`open #{@heroku_app}`
-			sleep 3
-		end
+		# def self.open_app
+		# 	puts "Opening your application"
+		# 	sleep 2
+		# 	`open #{@heroku_app}`
+		# 	sleep 3
+		# end
 
 		def self.run_app app_name
 			@heroku_app = app_name

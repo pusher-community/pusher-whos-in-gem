@@ -1,4 +1,4 @@
-Let's say you're working remote, but - alas - alone and out of the loop, you want to see who's in the office right now. Maybe a storm has hit your project, or maybe you just want to see the kind faces of friends who now seem very, very far away. You could dilute yet another Starbucks frappé with tears of grief, or have another walk to clear your mind of the bludgeoning pain and the burning anxiety. "Who's in the office?", you say to yourself, pacing your living room. Who indeed?
+Let's say you're working remote, but - alas - alone and out of the loop, you want to see who's in the office right now. Maybe a storm has hit your project, or maybe you just want to see the kind faces of friends who now seem very, very far away. "Who's in the office?", you say to yourself, pacing your living room. Who indeed?
 
 Well thanks to this new application, you can now find out in realtime!
 
