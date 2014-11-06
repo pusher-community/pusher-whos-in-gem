@@ -33,7 +33,7 @@ And here's the final step:
 
 	$ pusher-whos-in run _your_app_name_
 	
-If your Heroku URL is `mcdiddys-peeps.herokuapp.com`, then type `pusher-whos-in run mcdiddys-peeps`. As this script requires root privileges, enter your password.
+If your Heroku URL is `mcdiddys-peeps.herokuapp.com`, then type `pusher-whos-in run mcdiddys-peeps`. As this script requires root privileges, enter your password. (This will be explained further below).
 
 The moment of truth! Go back to your app and you should see the page populated with some much-missed faces - opaque if they're in, transparent if not.
 
@@ -44,7 +44,7 @@ Furthermore, if you don't wish to use the gem, or if you only want to run the ap
 ## How Does It Work, Then?
 
 
-The command `pusher-whos-in run` scans the local network every two minutes and posts to a Sinatra server. Using NMap, which normally is used as a security scanner to discover hosts on a local network, we can create an array of MAC addresses.
+The command `pusher-whos-in run` scans the local network every two minutes and posts to a Sinatra server. Using [NMap](http://nmap.org), which normally is used as a security scanner to discover hosts on a local network (thus requiring root privileges), we can create an array of MAC addresses.
 
 
 ```language-bash
@@ -94,6 +94,7 @@ Here are some other ways you might improve on our app:
 
 * Integrate it with HipChat and Slack. Perhaps you could create a bot to reply with the list of people present in the office?
 * Create logins with your company's email to access the app.
+* Tighten security. You could perhaps do this by easily introducing [private channels](http://pusher.com/docs/client_api_guide/client_private_channels) to your Pusher connections, or by creating a workaround that skips the need to HTTP post from a privileged script.
 * Play with the UI.
 * Create logs and visualisations of who comes and goes.
 
