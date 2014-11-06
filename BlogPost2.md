@@ -17,7 +17,11 @@ For ease of use, we've created a very easy command-line interface that helps you
 	$ gem install pusher-whos-in
 	$ pusher-whos-in init
 		
-The first command installs a gem that both initializes deployment, and sets up binary executable that scans your local network. The second command, when entered, should take you to the deployment page on Heroku. All you have to do is: name your app, choose the 'United States' region option, then click the shiny 'Deploy For Free' button.
+The first command installs a gem that both initializes deployment, and sets up binary executable that scans your local network. The second command, when entered, should take you to the deployment page on Heroku. 
+
+![Heroku page](https://raw.githubusercontent.com/pusher/pusher-whos-in-gem/master/screenshots/heroku.jpg)
+
+All you have to do is: name your app, choose the 'United States' region option, then click the shiny 'Deploy For Free' button.
 
 This will set up your very own Heroku application, provisioned with a Mongo database and Pusher add-on.
 
