@@ -6,9 +6,9 @@ Well thanks to this new application, you can now find out in realtime!
 
 'Who's In?' is a very simple app that tracks live who comes and goes from work. It's merely a local script, run from the office, and a free Heroku application that chat to each other every couple of minutes. 
 
-![WhosInRealtime](https://raw.githubusercontent.com/pusher/pusher-whos-in-gem/master/screenshots/whosingif2.gif)
-
 And the best part about it? It takes less than five minutes to set up.
+
+![WhosInRealtime](https://raw.githubusercontent.com/pusher/pusher-whos-in-gem/master/screenshots/whosingif2.gif)
 
 ## Wow! How Do I Set It Up?
 
