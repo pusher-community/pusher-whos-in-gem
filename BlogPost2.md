@@ -6,6 +6,8 @@ Well thanks to this new application, you can now find out in realtime!
 
 'Who's In?' is a very simple app that tracks live who comes and goes from work. It's merely a local script, run from the office, and a Heroku application that chat to each other every couple of minutes. 
 
+![WhosInRealtime](https://raw.githubusercontent.com/pusher/pusher-whos-in-gem/master/screenshots/whosingif2.gif)
+
 And the best part about it? It takes less than five minutes to set up.
 
 ## Wow! How Do I Set It Up?
@@ -15,7 +17,7 @@ For ease of use, we've created a very easy command-line interface that helps you
 	$ gem install pusher-whos-in
 	$ pusher-whos-in init
 		
-The first command, you may have guessed, installs the script needed to run everything. The second, when entered, should take you to the deployment page on Heroku. All you have to do is: name your app, choose the 'United States' region option, then click the shiny 'Deploy For Free' button.
+The first command installs a gem that both initializes deployment, and sets up binary executable that scans your local network. The second command, when entered, should take you to the deployment page on Heroku. All you have to do is: name your app, choose the 'United States' region option, then click the shiny 'Deploy For Free' button.
 
 This will set up your very own Heroku application, provisioned with a Mongo database and Pusher add-on.
 
