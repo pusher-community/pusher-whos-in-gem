@@ -4,7 +4,7 @@ Well thanks to this new application, you can now find out in realtime!
 
 ## What Is It?
 
-'Who's In?' is a very simple app that tracks live who comes and goes from work. It's merely a local script, run from the office, and a Heroku application that chat to each other every couple of minutes. 
+'Who's In?' is a very simple app that tracks live who comes and goes from work. It's merely a local script, run from the office, and a free Heroku application that chat to each other every couple of minutes. 
 
 ![WhosInRealtime](https://raw.githubusercontent.com/pusher/pusher-whos-in-gem/master/screenshots/whosingif2.gif)
 
@@ -23,9 +23,11 @@ The first command installs a gem that both initializes deployment, and sets up b
 
 All you have to do is: name your app, choose the 'United States' region option, then click the shiny 'Deploy For Free' button.
 
-This will set up your very own Heroku application, provisioned with a Mongo database and Pusher add-on.
+This will set up your very own Heroku application, provisioned with a free Mongo database and a free Pusher add-on.
 
 Now view your app and add some users. Simply enter their name and MAC and email addresses. ‘Who’s In’ will use the MAC addresses to identify whether your colleague is knocking about on your local network, and use their email address to fetch their gravatar.
+
+![Colleague Form](https://raw.githubusercontent.com/pusher/pusher-whos-in-gem/master/screenshots/add_colleague.gif)
 
 And here's the final step:
 
