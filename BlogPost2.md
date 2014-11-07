@@ -103,7 +103,7 @@ Then using HTML, CSS and Angular `{{expressions}}` we can render everyone on the
 
 Absolutely, and we encourage you to! 
 
-We acknowledge that this is merely one of many ways you can show who's in the office. If you can think of a better way, feel more than free to fork our Github repo](https://github.com/pusher/pusher-whos-in) and send us a pull request.
+We acknowledge that this is merely one of many ways you can show who's in the office. If you can think of a better way, feel more than free to [fork our Github repo](https://github.com/pusher/pusher-whos-in) and send us a pull request.
 
 Here are some other ways you might improve on our app:
 
