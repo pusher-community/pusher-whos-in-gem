@@ -8,24 +8,23 @@ program :version, '0.0.1'
 program :description, 'Setting up your whos_in realtime Heroku app'
  
 command :init do |c|
-  c.syntax = 'whos_in init, [options]'
+  c.syntax = 'pusher-whos-in init'
   c.summary = 'Sets up your own Who\'s In? application'
   c.description = 'Takes you to the Heroku page where you can deploy your own Who\'s In App'
-  c.example 'description', 'command example'
-  c.option '--some-switch', 'Some switch that does something'
+  c.example 'description', 'pusher-whos-in init'
   c.action do |args, options|
    WhosIn::Application.launch_heroku_deploy
   end
 end
 
 command :run do |c|
-  c.syntax = 'whos_in run APP_NAME'
+  c.syntax = 'pusher-whos-in run APP_NAME NETWORK_INTERFACE'
   c.summary = 'Pass in the application name and it runs the local scanner script and posts it to your app'
   c.description = ''
-  c.example 'description', 'whos_in run _your_app_name_'
-  c.option '--some-switch', 'Some switch that does something'
+  c.example 'description', 'pusher-whos-in run salty-fjord-1234 eth0'
   c.action do |args, options|
-    app_name = args.first
-    WhosIn::Application.run_app app_name
+    app_name = args[0]
+    interface = args[1]
+    WhosIn::Application.run_app(app_name, interface)
   end
 end

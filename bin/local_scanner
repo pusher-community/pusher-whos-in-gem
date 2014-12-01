@@ -2,9 +2,10 @@
 
 WHOSIN_URL=$1
 AUTH_KEY=$2
+NETWORK=$3
 
 local_scan() {
-  macs=( $(sudo nmap -sn 192.168.1.0/24 | grep -Eio "([0-9A-F]{2}:){5}[0-9A-F]{2}") )
+  macs=( $(sudo nmap -sn $NETWORK | grep -Eio "([0-9A-F]{2}:){5}[0-9A-F]{2}") )
 }
 
 update_offline_since() {
