@@ -5,3 +5,4 @@ gemspec
 
 gem 'commander'
 gem 'rufus-scheduler'
+gem 'system-getifaddrs'
