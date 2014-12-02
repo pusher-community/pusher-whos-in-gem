@@ -18,13 +18,30 @@ command :init do |c|
 end
 
 command :run do |c|
-  c.syntax = 'pusher-whos-in run APP_NAME NETWORK_INTERFACE'
+  c.syntax = 'pusher-whos-in run <Heroku App Name> [Network Interface]'
   c.summary = 'Pass in the application name and it runs the local scanner script and posts it to your app'
   c.description = ''
-  c.example 'description', 'pusher-whos-in run salty-fjord-1234 eth0'
+  c.example 'description', 'pusher-whos-in run heroku-name-0000 eth1'
   c.action do |args, options|
     app_name = args[0]
-    interface = args[1]
+
+    if args.length > 1 then
+        interface = args[1]
+    else
+        windows = (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
+        mac = (/darwin/ =~ RUBY_PLATFORM) != nil
+        unix = !windows
+        linux = unix && !mac
+
+        interface = "en0" if mac
+        interface = "eth0" if linux
+    end
+
+    unless interface then
+        puts "You must specify a network interface to scan. Use --help for more information"
+        return
+    end
+
     WhosIn::Application.run_app(app_name, interface)
   end
 end
