@@ -20,13 +20,13 @@ View your app, and click the grey hexagon to add colleagues. You will need to en
 
 ###Scanning Who's In
 
-Who's In uses NMap to scan the local network to see who is in the office. If you haven't installed NMap already, you can do so [here](http://nmap.org/download.html).
+Who's In uses NMap to scan the specified network to see who is in the office. If you haven't installed NMap already, you can do so [here](http://nmap.org/download.html).
 
 When that's done, type the command:
 
-	$ pusher-whos-in run *your_app_name*
+	$ pusher-whos-in run *your_app_name* *network_interface_to_scan*
 
-E.g. `pusher-whos-in run my_office_whos_in_app`. Then type your password. This script will run every two minutes and your Heroku application should show you who is in your office in realtime.
+E.g. `pusher-whos-in run my_office_whos_in_app eth1`. Then type your password. This script will run every two minutes and your Heroku application should show you who is in your office in realtime.
 
 ###Usage Without Gem
 
@@ -38,7 +38,7 @@ Click this shiny button:
 
 Then run:
 
-    $ sh local_scanner.sh *url_to_post_mac_addresses* *your_pusher_url*
+    $ sh local_scanner.sh *url_to_post_mac_addresses* *your_pusher_url* *nmap_network*
 
 ###Usage Without Deployment
 
